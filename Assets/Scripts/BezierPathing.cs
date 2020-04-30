@@ -2,27 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPathing : MonoBehaviour
+public class BezierPathing : MonoBehaviour
 {
-    // variables
-    WaveConfig waveConfig;
+    [SerializeField] PathConfig path;
+    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] bool looping = false;
+    [SerializeField] [Tooltip("Variable or Fixed speed movement." +
+                      "Variable will make object move faster on" +
+                      "straight parts and slower on sharp turns.")]
+                      bool variableSpeed = false;
+    [SerializeField] [Tooltip("Only used for fixed speed movement")] 
+                      int numWaypoints = 100;
 
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        transform.position = waveConfig.GetPath().GetPathCurves()[0][0].position;
+        transform.position = path.GetPathCurves()[0][0].position;
         do
         {
             yield return StartCoroutine(FollowPath());
         }
-        while (waveConfig.GetLooping());
+        while (looping);
     }
 
     private IEnumerator FollowPath()
     {
-        foreach (List<Transform> curve in waveConfig.GetPath().GetPathCurves())
+        foreach (List<Transform> curve in path.GetPathCurves())
         {
-            if (waveConfig.GetVariableSpeed())
+            if (variableSpeed)
             {
                 yield return StartCoroutine(FollowCurveVariableSpeed(curve));
             }
@@ -47,7 +54,7 @@ public class EnemyPathing : MonoBehaviour
 
         while (tParam < 1)
         {
-            tParam += Time.deltaTime * waveConfig.GetEnemySpeed();
+            tParam += Time.deltaTime * moveSpeed;
 
             newPos = Mathf.Pow(1 - tParam, 3) * curve[0].position +
                      3 * Mathf.Pow(1 - tParam, 2) * tParam * curve[1].position +
@@ -64,7 +71,7 @@ public class EnemyPathing : MonoBehaviour
     {
         // create list of waypoints based on bezier curve,  
         var waypointList = new List<Vector2>();
-        for (float t = 0; t <= 1; t += (1f / waveConfig.GetNumWaypoints()))
+        for (float t = 0; t <= 1; t += (1f / numWaypoints))
         {
             var newPos = Mathf.Pow(1 - t, 3) * curve[0].position +
                              3 * Mathf.Pow(1 - t, 2) * t * curve[1].position +
@@ -80,7 +87,7 @@ public class EnemyPathing : MonoBehaviour
         while(currentWaypointIndex <= waypointList.Count - 1)
         {
             var targetPos = waypointList[currentWaypointIndex];
-            var deltaMove = waveConfig.GetEnemySpeed() * Time.deltaTime;
+            var deltaMove = moveSpeed * Time.deltaTime;
             
             if (Vector2.MoveTowards(transform.position,
                                                      targetPos,
@@ -96,10 +103,4 @@ public class EnemyPathing : MonoBehaviour
             }
         }
     }
-
-    public void SetWaveConfig(WaveConfig waveConfig)
-    {
-        this.waveConfig = waveConfig;
-    }
-
 }

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a47a2794ce717488eef8faf19b36f1, type: 3}
+  m_Name: ZigZag1
+  m_EditorClassIdentifier: 
+  curvePrefabs:
+  - {fileID: 4413367720839132688, guid: 6cce4e152e5d49b4a98ef2ed553ba77c, type: 3}
+  - {fileID: 5931491868261948069, guid: 9c394cbbb6275db41b62fd0d89f11755, type: 3}
+  - {fileID: 2142931637080616058, guid: 2be778ffd20bdc74e97404549f7c968e, type: 3}

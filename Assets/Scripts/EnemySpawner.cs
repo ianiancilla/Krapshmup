@@ -20,12 +20,6 @@ public class EnemySpawner : MonoBehaviour
         while (looping);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator SpawnAllWaves()
     {
         foreach (WaveConfig waveConfig in waveConfigs)
@@ -40,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
         {
             var newEnemy = Instantiate(
                                         waveConfig.GetEnemyPrefab(),
-                                        waveConfig.GetWayPoints()[0].transform.position,
+                                        waveConfig.GetPath().GetPathCurves()[0][0].position,
                                         Quaternion.identity);
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
 
