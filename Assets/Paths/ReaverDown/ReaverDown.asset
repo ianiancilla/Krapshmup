@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a47a2794ce717488eef8faf19b36f1, type: 3}
+  m_Name: ReaverDown
+  m_EditorClassIdentifier: 
+  curvePrefabs:
+  - {fileID: 32493293998364303, guid: ef37ee6d99668ff4e90e50bee1d5879f, type: 3}
+  - {fileID: 7924230081163062430, guid: 8ab07f9c7cc5ba141afdb40c337f961f, type: 3}

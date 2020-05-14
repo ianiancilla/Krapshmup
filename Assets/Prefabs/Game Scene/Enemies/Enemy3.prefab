@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8731782000425851146}
   - component: {fileID: 8731782000425851147}
   - component: {fileID: 1694605601067983048}
+  - component: {fileID: -3056388603259879124}
   - component: {fileID: 610500381512387615}
   - component: {fileID: -1838179192243402912}
   - component: {fileID: -4995898876042881361}
-  - component: {fileID: -3056388603259879124}
   m_Layer: 9
   m_Name: Enemy3
   m_TagString: Untagged
@@ -103,8 +103,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2995428090426263019, guid: 7c5c08483ddf10e41a95cbe8009a0d58,
     type: 3}
   projectileSpeed: 10
-  minShotInterval: 0.2
-  variationShotInterval: 0.7
+  minShotInterval: 0.63
+  variationShotInterval: 0.96
   deathVFX: {fileID: 2932790165405909439, guid: c3a337bb87cf9514e8f9cd0dc475cf9c,
     type: 3}
   explosionDeathDelay: 1
@@ -112,6 +112,19 @@ MonoBehaviour:
   fireVolume: 0.15
   deathSFX: {fileID: 8300000, guid: d5fc0626e4e61ac4586d34c4e7304227, type: 3}
   deathVolume: 0.258
+--- !u!114 &-3056388603259879124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731782000425851252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511e9ebfa90a94741b5d1a63158ac48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!114 &610500381512387615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,16 +174,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-3056388603259879124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8731782000425851252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 511e9ebfa90a94741b5d1a63158ac48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100

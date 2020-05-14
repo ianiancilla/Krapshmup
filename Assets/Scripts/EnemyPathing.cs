@@ -10,7 +10,11 @@ public class EnemyPathing : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        transform.position = waveConfig.GetPath().GetPathCurves()[0][0].position;
+        var startPos = waveConfig.GetPath().GetPathCurves()[0][0].position;
+        startPos = ApplyReverse(startPos);
+        startPos = ApplyOffset(startPos);
+        transform.position = startPos;
+
         do
         {
             yield return StartCoroutine(FollowPath());
@@ -31,8 +35,9 @@ public class EnemyPathing : MonoBehaviour
                 yield return StartCoroutine(FollowCurveFixedSpeed(curve));
             }
         }
+        Destroy(gameObject);
     }
-    
+
     /// <summary>
     /// Moves object along a single bezier curve.
     /// Curve is calculated frame by frame in function of moveSpeed,
@@ -54,6 +59,9 @@ public class EnemyPathing : MonoBehaviour
                      3 * (1 - tParam) * Mathf.Pow(tParam, 2) * curve[2].position +
                      Mathf.Pow(tParam, 3) * curve[3].position;
 
+            newPos = ApplyReverse(newPos);
+            newPos = ApplyOffset(newPos);
+
             transform.position = newPos;
 
             yield return new WaitForEndOfFrame();
@@ -71,6 +79,9 @@ public class EnemyPathing : MonoBehaviour
                              3 * (1 - t) * Mathf.Pow(t, 2) * curve[2].position +
                              Mathf.Pow(t, 3) * curve[3].position;
 
+            newPos = ApplyReverse(newPos);
+            newPos = ApplyOffset(newPos);
+
             waypointList.Add(newPos);
         }
 
@@ -81,14 +92,14 @@ public class EnemyPathing : MonoBehaviour
         {
             var targetPos = waypointList[currentWaypointIndex];
             var deltaMove = waveConfig.GetEnemySpeed() * Time.deltaTime;
-            
-            if (Vector2.MoveTowards(transform.position,
-                                                     targetPos,
-                                                     deltaMove) != targetPos)
-            {
-                yield return transform.position = Vector2.MoveTowards(transform.position,
+
+            var newPos = Vector2.MoveTowards(transform.position,
                                                      targetPos,
                                                      deltaMove);
+
+            if (newPos != targetPos)
+            {
+                yield return transform.position = newPos;
             }
             else
             {
@@ -100,6 +111,44 @@ public class EnemyPathing : MonoBehaviour
     public void SetWaveConfig(WaveConfig waveConfig)
     {
         this.waveConfig = waveConfig;
+    }
+
+    /// <summary>
+    /// Checks if position needs to be reflected due to wave having reverse on X or Y axes.
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    private Vector2 ApplyReverse(Vector2 pos)
+    {
+        if (waveConfig.GetReverseX())
+        {
+            pos = new Vector3(pos.x,
+                              -(pos.y));
+        }
+        if (waveConfig.GetReverseY())
+        {
+            pos = new Vector3(-(pos.x),
+                              pos.y);
+        }
+        return pos;
+    }
+
+    private Vector2 ApplyOffset(Vector2 pos)
+    {
+        float xOffset = waveConfig.GetXOffest();
+        float yOffset = waveConfig.GetYOffest();
+
+        if (xOffset != 0)
+        {
+            pos = new Vector3(pos.x + xOffset,
+                              pos.y);
+        }
+        if (yOffset != 0)
+        {
+            pos = new Vector3(pos.x,
+                              pos.y + yOffset);
+        }
+        return pos;
     }
 
 }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8097696337688931847}
   - component: {fileID: 8459196576062719234}
   m_Layer: 9
-  m_Name: Enemy2
+  m_Name: Chomper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,10 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9436379b17522b54badac299a45dce2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  score: 100
-  projectilePrefab: {fileID: 2995428090426263019, guid: 7c5c08483ddf10e41a95cbe8009a0d58,
-    type: 3}
+  health: 200
+  score: 300
+  projectilePrefab: {fileID: 0}
   projectileSpeed: 10
   minShotInterval: 0.2
   variationShotInterval: 0.7

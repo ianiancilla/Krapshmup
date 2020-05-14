@@ -6,6 +6,9 @@ using UnityEngine;
 public class WaveConfig : ScriptableObject
 {
     // configuration variables
+    [Header("Meta")]
+    [TextArea(10, 14)] [SerializeField] string description;
+
     [Header("Wait Time")]
     [SerializeField] float timeBeforeWave = 0f;
 
@@ -20,6 +23,11 @@ public class WaveConfig : ScriptableObject
 
     [Header("Path")]
     [SerializeField] PathConfig path;
+    [SerializeField][Tooltip("Mirror path over X axes")]
+                     bool reverseX = false;
+    [SerializeField][Tooltip("Mirror path over Y axes")]
+                     bool reverseY = false;
+
     [SerializeField][Tooltip("Does enemy disappear at the end of path," +
                              "or keeps looping over path")] 
                      bool looping = false;
@@ -29,6 +37,8 @@ public class WaveConfig : ScriptableObject
                     bool variableSpeed = false;
     [SerializeField][Tooltip("Only used for fixed speed movement")]
                     int numWaypoints = 300;
+    [SerializeField] float xOffset = 0;
+    [SerializeField] float yOffset = 0;
 
 
     public float GetTimeBeforeWave() { return timeBeforeWave; }
@@ -50,4 +60,12 @@ public class WaveConfig : ScriptableObject
     public bool GetVariableSpeed() { return variableSpeed; }
 
     public int GetNumWaypoints() { return numWaypoints; }
+
+    public bool GetReverseX() { return reverseX; }
+
+    public bool GetReverseY() { return reverseY; }
+
+    public float GetXOffest() { return xOffset; }
+
+    public float GetYOffest() { return yOffset; }
 }

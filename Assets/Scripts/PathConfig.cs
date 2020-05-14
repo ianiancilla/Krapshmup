@@ -18,12 +18,12 @@ public class PathConfig : ScriptableObject
 
         foreach (GameObject curve in curvePrefabs)
         {
-            var waypoints = new List<Transform>();
+            var controlPoints = new List<Transform>();
             foreach (Transform child in curve.transform)
             {
-                waypoints.Add(child);
+                controlPoints.Add(child);
             }
-            pathCurves.Add(waypoints);
+            pathCurves.Add(controlPoints);
         }
         
         return pathCurves;

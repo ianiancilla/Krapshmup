@@ -10,13 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
-  m_Name: Wave 4
+  m_Name: 1_ZigaZag
   m_EditorClassIdentifier: 
+  description: 'Purple enemy, easy wave taking whole screen, from top to bottom.
+
+    Easy.
+
+    Starts
+    top left, moves zigzag to bottom right.'
+  timeBeforeWave: 2
   enemyPrefab: {fileID: 8731782000425851252, guid: cc2028b21ebf79c428aa063dcc4ccc93,
     type: 3}
-  pathPrefab: {fileID: 8960489762706294190, guid: 9a42de645c1ef3f4d8ebf37929108c31,
-    type: 3}
-  timeBetweenSpawns: 1
-  spawnRandomFactor: 0.3
-  numOfEnemies: 7
-  enemySpeed: 3
+  timeBetweenSpawns: 0.5
+  spawnRandomFactor: 0.5
+  numOfEnemies: 15
+  enemySpeed: 0.71
+  path: {fileID: 11400000, guid: 557df84fd6879cd4987baa024d88b947, type: 2}
+  reverseX: 0
+  reverseY: 1
+  looping: 0
+  variableSpeed: 1
+  numWaypoints: 300
+  xOffset: 0
+  yOffset: 0

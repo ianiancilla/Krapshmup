@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float movementBoundaryMargin = 0f;
     [SerializeField] int health = 200;
+    [SerializeField] bool invincible = false;
 
     [Header("Player projectile")]
     [SerializeField] GameObject laserPrefab;
@@ -41,10 +42,16 @@ public class Player : MonoBehaviour
     float xPadding;
     float yPadding;
 
+    // cache
+    GameSession gameSession;
+
     // Start is called before the first frame update
     void Start()
     {
         SetupMoveBoundaries();
+
+        // cache
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
@@ -119,11 +126,15 @@ public class Player : MonoBehaviour
 
     private void HandleDamage(DamageDealer damageDealer)
     {
-        health -= damageDealer.GetDamage();
+        var damage = damageDealer.GetDamage();
+        health -= damage;
+        gameSession.SubtractFromScore(damageDealer.GetDamage());
+
         damageDealer.Hit();
         AudioSource.PlayClipAtPoint(damagedSFX, Camera.main.transform.position, damagedVolume);
         if (health <= 0)
         {
+            if (invincible) { return; }
             Die();
         }
     }

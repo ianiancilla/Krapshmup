@@ -10,13 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
-  m_Name: Wave 2
+  m_Name: ReaverAcross
   m_EditorClassIdentifier: 
+  description: 'Reavers shooting across the screen.
+
+    To be used with reverses
+    and offsets, making multiple ones straight after each other.
+
+    Evil.'
+  timeBeforeWave: 0
   enemyPrefab: {fileID: 8731782000425851252, guid: 57d8912c84fa98b40a3a7427eace1209,
     type: 3}
-  pathPrefab: {fileID: 8960489762706294190, guid: 164568dc2a9478f448e04b774474f7c7,
-    type: 3}
-  timeBetweenSpawns: 0.5
-  spawnRandomFactor: 0.3
-  numOfEnemies: 10
-  enemySpeed: 4
+  timeBetweenSpawns: 0.2
+  spawnRandomFactor: 0
+  numOfEnemies: 4
+  enemySpeed: 10.59
+  path: {fileID: 11400000, guid: 3cb9745000de42a4e8dda73747b3e23a, type: 2}
+  reverseX: 0
+  reverseY: 0
+  looping: 0
+  variableSpeed: 0
+  numWaypoints: 300
+  xOffset: 0
+  yOffset: 5

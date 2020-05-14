@@ -10,16 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
-  m_Name: Wave 1
+  m_Name: BomberAcross
   m_EditorClassIdentifier: 
-  timeBeforeWave: 8.55
+  description: Bomber slowly arcing through middle of screen from left to right.
+  timeBeforeWave: 0
   enemyPrefab: {fileID: 8731782000425851252, guid: 5e4ac4d2684fdd94e87709ad89a58ee8,
     type: 3}
-  timeBetweenSpawns: 2
+  timeBetweenSpawns: 1
   spawnRandomFactor: 0.3
-  numOfEnemies: 3
-  enemySpeed: 1
-  path: {fileID: 11400000, guid: 557df84fd6879cd4987baa024d88b947, type: 2}
+  numOfEnemies: 1
+  enemySpeed: 0.55
+  path: {fileID: 11400000, guid: aa95528b757bc25498442b832fb5ffd9, type: 2}
+  reverseX: 0
+  reverseY: 0
   looping: 0
-  variableSpeed: 1
+  variableSpeed: 0
   numWaypoints: 300
+  xOffset: 0
+  yOffset: 0

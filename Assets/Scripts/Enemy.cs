@@ -93,11 +93,14 @@ public class Enemy : MonoBehaviour
 
     private void Fire()
     {
-        AudioSource.PlayClipAtPoint(fireSFX, Camera.main.transform.position, fireVolume);
-        var projectile = Instantiate(projectilePrefab,
-                                    transform.position,
-                                    Quaternion.identity) as GameObject;
-        projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -(projectileSpeed));
+        if (projectilePrefab)
+        {
+            AudioSource.PlayClipAtPoint(fireSFX, Camera.main.transform.position, fireVolume);
+            var projectile = Instantiate(projectilePrefab,
+                                        transform.position,
+                                        Quaternion.identity) as GameObject;
+            projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -(projectileSpeed));
+        }
     }
 
     private void Explosion()

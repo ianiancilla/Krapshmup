@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 8731782000425851146}
   - component: {fileID: 8731782000425851147}
   - component: {fileID: -8407453094997428310}
+  - component: {fileID: 1787024125529820128}
   - component: {fileID: 610500381512387615}
   - component: {fileID: 6580436550451197824}
   - component: {fileID: -5916576119812442161}
-  - component: {fileID: 1787024125529820128}
   m_Layer: 9
-  m_Name: Enemy1
+  m_Name: PurpleStraightShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 10
   minShotInterval: 0.5
-  variationShotInterval: 1
+  variationShotInterval: 1.25
   deathVFX: {fileID: 2932790165405909439, guid: c3a337bb87cf9514e8f9cd0dc475cf9c,
     type: 3}
   explosionDeathDelay: 1
@@ -112,6 +112,19 @@ MonoBehaviour:
   fireVolume: 0.15
   deathSFX: {fileID: 8300000, guid: d5fc0626e4e61ac4586d34c4e7304227, type: 3}
   deathVolume: 0.258
+--- !u!114 &1787024125529820128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8731782000425851252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511e9ebfa90a94741b5d1a63158ac48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!114 &610500381512387615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,16 +174,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1787024125529820128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8731782000425851252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 511e9ebfa90a94741b5d1a63158ac48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100

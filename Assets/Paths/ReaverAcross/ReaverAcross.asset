@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01a47a2794ce717488eef8faf19b36f1, type: 3}
-  m_Name: ZigZag2
+  m_Name: ReaverAcross
   m_EditorClassIdentifier: 
-  curvePrefabs: []
+  curvePrefabs:
+  - {fileID: 1746519590453645542, guid: 4f2a04c132e16e540a5f81a45f067b01, type: 3}

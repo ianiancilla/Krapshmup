@@ -104,7 +104,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2995428090426263019, guid: c8e3df1446501c54eb39fd532e0d07da,
     type: 3}
   projectileSpeed: 2
-  minShotInterval: 1
+  minShotInterval: 3
   variationShotInterval: 0.5
   deathVFX: {fileID: 2932790165405909439, guid: c3a337bb87cf9514e8f9cd0dc475cf9c,
     type: 3}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511e9ebfa90a94741b5d1a63158ac48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 300
+  damage: 3000
 --- !u!114 &-2468797110571005972
 MonoBehaviour:
   m_ObjectHideFlags: 0

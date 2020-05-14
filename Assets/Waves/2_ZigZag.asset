@@ -10,13 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
-  m_Name: Wave 3
+  m_Name: 2_ZigZag
   m_EditorClassIdentifier: 
+  description: 'Green enemy
+
+    Zigzag from top to bottom on screen left side, then
+    straight back up to the other side till the top.'
+  timeBeforeWave: 0
   enemyPrefab: {fileID: 8731782000425851252, guid: ed86dd890d48adc45b741f95c790ac43,
     type: 3}
-  pathPrefab: {fileID: 8960489762706294190, guid: 2caa45cae3bba7f44adf329e86b2117d,
-    type: 3}
-  timeBetweenSpawns: 1
+  timeBetweenSpawns: 0.5
   spawnRandomFactor: 0.3
-  numOfEnemies: 4
+  numOfEnemies: 15
   enemySpeed: 5.6
+  path: {fileID: 11400000, guid: 9efe23a693f362f43acfd27699430554, type: 2}
+  reverseX: 0
+  reverseY: 0
+  looping: 0
+  variableSpeed: 0
+  numWaypoints: 300
+  xOffset: 0
+  yOffset: 0
