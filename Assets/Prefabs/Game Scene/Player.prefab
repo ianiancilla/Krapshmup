@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4036600578533397175}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   movementBoundaryMargin: 0.2
-  health: 300
+  health: 30000
   laserPrefab: {fileID: 2995428090426263019, guid: 13d65def1e508534786ab1ac6125501b,
     type: 3}
   projectileSpeed: 15

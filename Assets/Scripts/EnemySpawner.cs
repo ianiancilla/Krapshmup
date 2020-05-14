@@ -30,6 +30,8 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
     {
+        yield return new WaitForSeconds(waveConfig.GetTimeBeforeWave());
+
         for (int i = 0; i < waveConfig.GetNumOfEnemies(); i++)
         {
             var newEnemy = Instantiate(

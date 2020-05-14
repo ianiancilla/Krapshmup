@@ -6,6 +6,10 @@ using UnityEngine;
 public class WaveConfig : ScriptableObject
 {
     // configuration variables
+    [Header("Wait Time")]
+    [SerializeField] float timeBeforeWave = 0f;
+
+
     [Header("Enemy")]
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] float timeBetweenSpawns = 0.5f;
@@ -26,6 +30,8 @@ public class WaveConfig : ScriptableObject
     [SerializeField][Tooltip("Only used for fixed speed movement")]
                     int numWaypoints = 300;
 
+
+    public float GetTimeBeforeWave() { return timeBeforeWave; }
 
     public GameObject GetEnemyPrefab()    {return enemyPrefab;}
 

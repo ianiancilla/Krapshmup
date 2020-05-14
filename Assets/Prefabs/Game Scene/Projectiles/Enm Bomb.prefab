@@ -10,11 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5408379443021811818}
   - component: {fileID: 3845203817690295038}
-  - component: {fileID: 5219523309294441728}
   - component: {fileID: 786600996619241322}
   - component: {fileID: 6639854673672514780}
+  - component: {fileID: 5219523309294441728}
+  - component: {fileID: 2877711940773193978}
+  - component: {fileID: 2934375062425192430}
   m_Layer: 11
-  m_Name: Enm Laser 1
+  m_Name: Enm Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,30 +75,17 @@ SpriteRenderer:
   m_SortingLayerID: 812530593
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ca21c22bd668d8b4c8da5af0be1eb216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9d8fd6def4027246a39667939bf5e67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.09, y: 0.37}
+  m_Size: {x: 0.37, y: 0.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5219523309294441728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2995428090426263019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 511e9ebfa90a94741b5d1a63158ac48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
 --- !u!50 &786600996619241322
 Rigidbody2D:
   serializedVersion: 4
@@ -134,3 +123,42 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.09, y: 0.37}
   m_Direction: 0
+--- !u!114 &5219523309294441728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995428090426263019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511e9ebfa90a94741b5d1a63158ac48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 500
+--- !u!114 &2877711940773193978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995428090426263019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d765e5e06399c749bf3c54ca446eb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: -234.39
+--- !u!114 &2934375062425192430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995428090426263019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea65c8709a7f616458895e2acc8c253b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2.82
