@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
+  m_Name: ReaverAcrossBottom
+  m_EditorClassIdentifier: 
+  description: 'Reavers shooting across the screen.
+
+    To be used with reverses
+    and offsets, making multiple ones straight after each other.
+
+    Evil.'
+  timeBeforeWave: 2.22
+  enemyPrefab: {fileID: 8731782000425851252, guid: 57d8912c84fa98b40a3a7427eace1209,
+    type: 3}
+  timeBetweenSpawns: 0.2
+  spawnRandomFactor: 0
+  numOfEnemies: 4
+  enemySpeed: 10.59
+  path: {fileID: 11400000, guid: 3cb9745000de42a4e8dda73747b3e23a, type: 2}
+  reverseX: 0
+  reverseY: 1
+  looping: 0
+  variableSpeed: 0
+  numWaypoints: 300
+  xOffset: 0
+  yOffset: -5

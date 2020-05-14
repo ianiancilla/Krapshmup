@@ -10,17 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
-  m_Name: BomberAcross
+  m_Name: BottomV 1
   m_EditorClassIdentifier: 
-  description: Bomber slowly arcing through middle of screen from left to right.
-  timeBeforeWave: 1.57
-  enemyPrefab: {fileID: 8731782000425851252, guid: 5e4ac4d2684fdd94e87709ad89a58ee8,
+  description: 'V shape starting bottom left ending bottom right.
+
+    frequent fast
+    enemies
+
+'
+  timeBeforeWave: 0
+  enemyPrefab: {fileID: 8731782000425851252, guid: cc2028b21ebf79c428aa063dcc4ccc93,
     type: 3}
-  timeBetweenSpawns: 1
+  timeBetweenSpawns: 1.03
   spawnRandomFactor: 0.3
-  numOfEnemies: 1
-  enemySpeed: 0.55
-  path: {fileID: 11400000, guid: aa95528b757bc25498442b832fb5ffd9, type: 2}
+  numOfEnemies: 9
+  enemySpeed: 3.73
+  path: {fileID: 11400000, guid: 7a59ebed4c177f444986c22495aa10e8, type: 2}
   reverseX: 0
   reverseY: 0
   looping: 0

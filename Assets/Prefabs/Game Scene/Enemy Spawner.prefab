@@ -45,8 +45,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveConfigs:
   - {fileID: 11400000, guid: 220b638722bb4df4480f5963a07ba4d8, type: 2}
-  - {fileID: 11400000, guid: df4b5404715a0d1449df6da1bf72ed53, type: 2}
-  - {fileID: 11400000, guid: 883733b0d9d97da46aa75bb3a1314908, type: 2}
+  - {fileID: 11400000, guid: a26c678c215ff2946823ce51a7cfbb5a, type: 2}
   - {fileID: 11400000, guid: c85d030aa4aece34cbc0d50aafbca4e8, type: 2}
+  - {fileID: 11400000, guid: a81f3f00b1ce8d64d9d2f22663ddb22a, type: 2}
+  - {fileID: 11400000, guid: 4a86581a5692a0943ac53fa5393098c1, type: 2}
   - {fileID: 11400000, guid: cc0b44fb4f18bde47a2e1775c303ea04, type: 2}
+  - {fileID: 11400000, guid: 883733b0d9d97da46aa75bb3a1314908, type: 2}
+  - {fileID: 11400000, guid: 389f3e0d5c461354c88b2c3519468b98, type: 2}
+  - {fileID: 11400000, guid: ab99be39ced05f24aa2cf3cde2bc417b, type: 2}
+  - {fileID: 11400000, guid: 3c8762c845fab03418882ae638739eea, type: 2}
+  - {fileID: 11400000, guid: 26866efdf77ff944da5af04470cf6c78, type: 2}
   looping: 1

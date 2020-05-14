@@ -35,7 +35,10 @@ public class EnemyPathing : MonoBehaviour
                 yield return StartCoroutine(FollowCurveFixedSpeed(curve));
             }
         }
-        Destroy(gameObject);
+        if (! waveConfig.GetLooping())
+        {
+            Destroy(gameObject);
+        }
     }
 
     /// <summary>

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1838179192243402912}
   - component: {fileID: -4995898876042881361}
   m_Layer: 9
-  m_Name: Enemy3
+  m_Name: GreenShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 34662109
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 142dab14b72fe024cb527b3bd779db18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0fb5c9360bb5f4443bd26694dab64cae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.97, y: 0.84}
+  m_Size: {x: 1, y: 0.99}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,11 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   score: 100
-  projectilePrefab: {fileID: 2995428090426263019, guid: 7c5c08483ddf10e41a95cbe8009a0d58,
+  projectilePrefab: {fileID: 2995428090426263019, guid: 54efe05d3c5332a41a71ad7fd0a92596,
     type: 3}
   projectileSpeed: 10
-  minShotInterval: 0.63
-  variationShotInterval: 0.96
+  minShotInterval: 0.29
+  variationShotInterval: 1.71
   deathVFX: {fileID: 2932790165405909439, guid: c3a337bb87cf9514e8f9cd0dc475cf9c,
     type: 3}
   explosionDeathDelay: 1

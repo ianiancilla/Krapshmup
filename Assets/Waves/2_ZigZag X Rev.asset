@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
-  m_Name: BomberAcross
+  m_Name: 2_ZigZag X Rev
   m_EditorClassIdentifier: 
-  description: Bomber slowly arcing through middle of screen from left to right.
-  timeBeforeWave: 1.57
-  enemyPrefab: {fileID: 8731782000425851252, guid: 5e4ac4d2684fdd94e87709ad89a58ee8,
+  description: 'Green enemy
+
+    Zigzag from bottom to top on screen left side, then
+    straight back up to the other side till the bottom.'
+  timeBeforeWave: 4.63
+  enemyPrefab: {fileID: 8731782000425851252, guid: ed86dd890d48adc45b741f95c790ac43,
     type: 3}
-  timeBetweenSpawns: 1
+  timeBetweenSpawns: 0.46
   spawnRandomFactor: 0.3
-  numOfEnemies: 1
-  enemySpeed: 0.55
-  path: {fileID: 11400000, guid: aa95528b757bc25498442b832fb5ffd9, type: 2}
-  reverseX: 0
-  reverseY: 0
+  numOfEnemies: 15
+  enemySpeed: 4.72
+  path: {fileID: 11400000, guid: 9efe23a693f362f43acfd27699430554, type: 2}
+  reverseX: 1
+  reverseY: 1
   looping: 0
   variableSpeed: 0
   numWaypoints: 300

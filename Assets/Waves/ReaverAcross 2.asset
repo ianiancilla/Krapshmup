@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa6e130ac4087ac468d65311d07cd98a, type: 3}
-  m_Name: ReaverAcross
+  m_Name: ReaverAcross 2
   m_EditorClassIdentifier: 
   description: 'Reavers shooting across the screen.
 
@@ -27,9 +27,9 @@ MonoBehaviour:
   enemySpeed: 10.59
   path: {fileID: 11400000, guid: 3cb9745000de42a4e8dda73747b3e23a, type: 2}
   reverseX: 0
-  reverseY: 0
+  reverseY: 1
   looping: 0
   variableSpeed: 0
   numWaypoints: 300
   xOffset: 0
-  yOffset: 5
+  yOffset: -4
