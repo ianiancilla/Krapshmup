@@ -6,10 +6,16 @@ public class GameSession : MonoBehaviour
 {
     // variables
     int playerScore = 0;
+    [SerializeField] public bool isInvincible = true;
 
     private void Awake()
     {
         SetUpSingleton();        
+    }
+
+    private void Update()
+    {
+        Debug.Log(isInvincible);
     }
 
     private void SetUpSingleton()
@@ -37,6 +43,16 @@ public class GameSession : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public void SetToInvincible()
+    {
+        isInvincible = true;
+    }
+
+    public void SetToNotInvincible()
+    {
+        isInvincible = false;
     }
 
 }

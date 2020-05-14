@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float movementBoundaryMargin = 0f;
     [SerializeField] int health = 200;
-    [SerializeField] bool invincible = false;
+    //[SerializeField] bool invincible = false;
 
     [Header("Player projectile")]
     [SerializeField] GameObject laserPrefab;
@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     // variables
 
     Coroutine firingCoroutine;
+    bool invincible;
 
     // boundaries for player movement
     float xMin;
@@ -52,6 +53,9 @@ public class Player : MonoBehaviour
 
         // cache
         gameSession = FindObjectOfType<GameSession>();
+
+        invincible = gameSession.isInvincible;
+        Debug.Log(invincible);
     }
 
     // Update is called once per frame
@@ -59,6 +63,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Fire();
+        Debug.Log(invincible);
     }
 
 
